@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    
+    <style>
+        div#quadrado {
+            background-color: rgb(49, 49, 54);
+            color: aliceblue;
+            font-size: 25px;
+            width: 450px;
+            height: 450px;
+            line-height: 400px;
+            text-align: center;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Siga as instruções do quadrado para testar</h1>
+        
+    <div id="quadrado" onclick="clicar()" onmouseenter="passar()" onmouseout="sair()">
+        Passe o mouse aqui
+    </div>
+
+    <script>
+        let a = document.getElementById("quadrado")
+
+        function clicar() {
+            a.innerText = "Você clicou aqui"  
+        }
+        function passar() {
+            a.innerText = "Você está com o cursor do mouse aqui"       
+        }
+        function sair() {
+            a.innerText = "Você removeu o cursor daqui";   
+            setTimeout(() => {
+                alert("Finalizado. Clique em OK para recomeçar!");
+                a.innerText = "Passe o mouse aqui";
+            }, 800);         
+        }
+
+    </script>
+    
+</body>
+</html>
+
+
